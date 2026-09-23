@@ -1,0 +1,111 @@
+Loaded 1 charger path file(s): shape=(1, 188, 39, 48, 2)
+Rebuilt 1887 added columns through iteration 13 for 188 trucks; window size = 10 days.
+Exempting 1 of 188 trucks from the global horizon constraint (no column within 30.0 of start_soc=80.0 at the end of the horizon) -- they still get the per-window select-one-path and per-boundary continuity constraints, just not the day-39-vs-day-0 check. (original_id, new_id, best_gap): [(12189, 136, 230.4011220000002)]
+Set parameter Username
+Academic license - for non-commercial use only - expires 2027-05-28
+Set parameter TimeLimit to value 8000
+Set parameter Threads to value 20
+Set parameter LogFile to value "price_problem_expriments_full_fleet_faster_advance_network_priority_rule_39_day/windowed_integer_resolve_10day_tol20_repriced/windowed_integer_gurobi.log"
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[rosetta2] - Darwin 25.6.0 25G83)
+
+CPU model: Apple M1 Pro
+Thread count: 10 physical cores, 10 logical processors, using up to 20 threads
+
+Warning: Thread count (20) is larger than processor count (10)
+         Reduce the value of the Threads parameter to improve performance
+
+
+Non-default parameters:
+TimeLimit  8000
+Threads  20
+
+Optimize a model with 32086 rows, 8318 columns and 146977 nonzeros
+Model fingerprint: 0x7bcfba20
+Variable types: 0 continuous, 8318 integer (8300 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+04]
+  Objective range  [1e+00, 4e+04]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+Presolve removed 27769 rows and 3915 columns
+Presolve time: 0.26s
+Presolved: 4317 rows, 4403 columns, 35758 nonzeros
+Variable types: 0 continuous, 4403 integer (4391 binary)
+Found heuristic solution: objective 783383.00000
+
+Root relaxation: objective 3.145890e+05, 4540 iterations, 0.32 seconds (0.53 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 314589.023    0  915 783383.000 314589.023  59.8%     -    0s
+H    0     0                    783382.00000 314589.023  59.8%     -    0s
+H    0     0                    507901.00000 314589.023  38.1%     -    0s
+H    0     0                    507823.00000 314589.023  38.1%     -    0s
+H    0     0                    469810.00000 314589.023  33.0%     -    0s
+H    0     0                    469809.00000 314589.023  33.0%     -    0s
+H    0     0                    468311.00000 314589.023  32.8%     -    0s
+H    0     0                    468310.00000 314589.023  32.8%     -    0s
+     0     0 316351.920    0 1003 468310.000 316351.920  32.4%     -    1s
+H    0     0                    430304.00000 316351.921  26.5%     -    1s
+H    0     0                    430303.00000 316351.921  26.5%     -    1s
+     0     0 316352.710    0  937 430303.000 316352.710  26.5%     -    1s
+     0     0 316352.716    0  935 430303.000 316352.716  26.5%     -    1s
+H    0     0                    430301.00000 316352.716  26.5%     -    1s
+H    0     0                    430300.00000 316352.716  26.5%     -    1s
+     0     0 316359.664    0  981 430300.000 316359.664  26.5%     -    2s
+     0     0 316360.057    0  931 430300.000 316360.057  26.5%     -    2s
+H    0     0                    430298.00000 316366.291  26.5%     -    3s
+     0     0 316366.291    0  921 430298.000 316366.291  26.5%     -    3s
+H    0     0                    430297.00000 316366.296  26.5%     -    3s
+     0     0 316366.456    0  947 430297.000 316366.456  26.5%     -    3s
+     0     0 316367.041    0  933 430297.000 316367.041  26.5%     -    3s
+     0     0 316367.053    0  939 430297.000 316367.053  26.5%     -    3s
+     0     0 316367.355    0  989 430297.000 316367.355  26.5%     -    3s
+     0     0 316367.356    0  938 430297.000 316367.356  26.5%     -    3s
+H    0     0                    430295.00000 316367.356  26.5%     -    4s
+H    0     0                    430294.00000 316367.356  26.5%     -    4s
+H    0     0                    392311.00000 316367.356  19.4%     -    4s
+H    0     0                    392310.00000 316367.356  19.4%     -    4s
+H    0     0                    392309.00000 316367.356  19.4%     -    4s
+H    0     0                    392307.00000 316367.356  19.4%     -    4s
+H    0     0                    392306.00000 316367.356  19.4%     -    4s
+     0     2 316367.356    0  924 392306.000 316367.356  19.4%     -    4s
+     3     7 316367.833    2  910 392306.000 316367.427  19.4%   676    5s
+H   31    40                    392305.00000 316368.980  19.4%  1753    6s
+   224   210 320159.514   10  886 392305.000 316369.770  19.4%   866   10s
+H  227   210                    354343.00000 316369.770  10.7%   873   10s
+H  244   210                    354337.00000 316369.770  10.7%   860   10s
+H  257   218                    354335.00000 316370.100  10.7%   823   10s
+H  527   315                    354334.00000 316370.100  10.7%   721   13s
+H  576   372                    354333.00000 316370.100  10.7%   688   14s
+   640   379 354332.052   20  511 354333.000 316370.100  10.7%   664   15s
+  1294   620 354332.293   18  563 354333.000 316370.100  10.7%   541   20s
+  1775   718 infeasible   24      354333.000 316370.778  10.7%   520   25s
+  2330   856     cutoff   20      354333.000 316373.096  10.7%   523   30s
+H 2688  1094                    354330.99999 316386.853  10.7%   502   32s
+  4202  1064 319203.393   39  914 354331.000 317862.729  10.3%   395   35s
+
+Cutting planes:
+  Gomory: 9
+  Cover: 250
+  Clique: 24
+  MIR: 169
+  StrongCG: 34
+  GUB cover: 132
+  Inf proof: 2
+  Zero half: 101
+  RLT: 37
+  Relax-and-lift: 7
+
+Explored 6807 nodes (1952068 simplex iterations) in 38.56 seconds (51.17 work units)
+Thread count was 20 (of 10 available processors)
+
+Solution count 10: 354331 354333 354334 ... 392309
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.543309999942e+05, best bound 3.543291512473e+05, gap 0.0005%
+Windowed integer: {'objective': 354330.99999421043, 'mip_gap': 5.217570231063898e-06, 'slow_chargers': 6.0, 'fast_chargers': 9.0, 'total_chargers': 15.0, 'num_windows': 4, 'horizon_exempt_trucks': 1}
+                                       model     objective  mip_gap  slow_chargers  fast_chargers  total_chargers  num_windows  horizon_exempt_trucks
+windowed_integer_10day_soctol20_horizontol30 354330.999994 0.000005            6.0            9.0            15.0            4                    1.0
+                     unwindowed_full_integer 355990.000000 0.004163           48.0            7.0            55.0            1                    NaN
